@@ -1,0 +1,37 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+
+                <h2>List of Animals</h2>
+                <div id="AN"></div>
+                <h2>Form starts here</h2>
+                <section id="add-animal">
+                    <div class="ani-alert added"> Your animal has been added</div>
+                    <form id="animalForm" class=" pure-form pure-form-stacked">
+                        <fieldset>
+                            <div class="pure-g">
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="name">Animal</label>
+                                    <input id="animalname" required class="pure-u-23-24" type="text">
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="email">E-Mail</label>
+                                    <input id="useremail" required class="pure-u-23-24" type="email" required>
+                                </div>
+                        </fieldset>
+                        <button id="addButton" type="submit" class=" pure-button added">Add animal</button>
+
+                    </form>
+                </section><!--add-animal form-->
+
+
+
+
+                
+
+</div>
+{{ partial "footer.html" . }}

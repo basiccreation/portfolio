@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+    {{ $urlPosts := "https://jsonplaceholder.typicode.com/posts" }}
+    {{ $postsJSON := getJSON $urlPosts }}
+    {{ $urlUsers := "https://jsonplaceholder.typicode.com/users" }}
+    {{ $usersJSON := getJSON $urlUsers }}
+    <h1>Combining JSON from two APIs using userId</h1>
+    <h2>List of Last Five People Sorted Ascending</h2>
+    {{ range sort ( last 5 $usersJSON ) "id" "desc" }}
+    <h2>{{ .name }}, {{ .address.city}} ( {{ .id }} )</h2>
+    <h3>A List of Last Three Posts in Ascending Order</h3>
+    {{ $currentUsersPostsJSON := getJSON $urlPosts "?userId=" (.id | string) }}
+    {{ range first 3 $currentUsersPostsJSON }}
+    <h4>{{ .title }}</h4>
+    <p>{{ .body }} <span>. REVIEW-ID: {{ .id }}</span></p>
+    {{ end }}
+    {{ end }}
+</div>
+{{ partial "footer.html" . }}

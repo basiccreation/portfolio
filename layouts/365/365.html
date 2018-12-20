@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1>My 365 Challenge</h1>
+</div>
+
+<div class="content">
+  {{ range ( .Paginate (where .Data.Pages "Type" "365")).Pages }}
+    {{ .Render "summary"}}
+  {{ end }}
+  {{ partial "pagination.html" . }}
+
+</div>
+
+{{ partial "footer.html" . }}

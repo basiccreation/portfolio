@@ -1,0 +1,19 @@
+<article>
+  <header>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+ <!--   
+ this will add date to the post
+ {{ partial "post_meta.html" . }}
+-->
+  </header>
+
+  <p>
+  {{ .Summary }}
+  </p>
+
+  {{ if .Truncated }}
+  <footer>
+    <a href="{{ .RelPermalink }}">See details ...<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  {{ end }}
+</article>

@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+    <h1>Three States with Images</h1>
+    <p>You can define more than one menu. It also doesn’t have to be a complex value, menu can also be a string, an array of strings, or an array of complex values like in the example above.</p>
+</div>
+{{ range .Site.Data.reviews}}
+<h3> The capital in {{.name}} is {{.capital}} and the state abbreviation is {{ .abbr}}.</h3>
+<img class="special-img-class" src={{ .src}} />
+
+                {{end}}
+
+            </div>
+<div class="col-lg-8">
+    <div class="header">
+        <h1>Just California</h1>
+        <p>After more than two weeks of catastrophic infernos that indiscriminately devoured thousands and thousands of homes and structures and claimed scores of lives, both of California’s wildfires are now almost completely contained.</p>
+    </div>
+    {{ range where .Site.Data.states "name" "==" "California" }}
+    <h2>{{ .name }}</h2>
+    <p>{{ .capital }}</p>
+    California is located at {{ .lat }} by {{ .long }}
+    <h3> The capital in {{.name}} is {{.capital}} and the state abbreviation is {{ .abbr}}.</h3>
+    <img class="special-img-class" src={{.src}} />
+                {{end}}
+            </div>
+    {{ partial "footer.html" . }}

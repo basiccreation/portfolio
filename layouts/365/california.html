@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+    {{ range where .Site.Data.states "name" "==" "California" }}
+    <h1 class= "customheaderblue">The State of {{ .name}}</h1>
+    <p>{{ .desc}}</p>
+    <h2>{{ .name }}</h2>
+    <p>{{ .capital }}</p>
+    Location : {{ .lat }}, {{ .long }}
+    <h3 class= "customheaderred"> The capital in {{.name}} is {{.capital}} and the state abbreviation is {{ .abbr}}.</h3>
+    <img class="special-img-class" src={{.src}} />
+    <hr />
+    <h2>{{ .name}} Images</h2>
+    {{ $array := .imgs }}
+    {{ range $array }}
+    <div class="its33">
+        <img class="its33" src="/img/{{ . }}" />
+                        </div>
+        {{ end }}
+        {{end}}
+    </div>
+    {{ partial "footer.html" . }}

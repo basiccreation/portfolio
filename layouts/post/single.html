@@ -1,0 +1,23 @@
+<!-- this is a single page of the portfolio-->
+{{ partial "header.html" . }}
+
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+  <h1>{{ .Title }}</h1>
+  <h2>- 
+  {{ range .Params.tags }}
+    {{ . }} - 
+  {{ end }}
+  </h2>
+
+</div>
+<div class="content">
+
+<!-- adding a date that I dont want right now {{ partial "post_meta.html" . }}
+-->
+
+  {{ .Content }}
+
+</div>
+
+{{ partial "footer.html" . }}

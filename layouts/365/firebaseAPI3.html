@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+    <h1>List of things</h1>
+    <div id="thing-list"></div>
+    <h2>Thing form starts here</h2>
+    <section>
+        <div class="thing-alert added">Thing has been added</div>
+        <div class="thing-alert changed"> Change Button work in progress</div>
+        <div class="thing-alert deleted"> Thing has been deleted</div>
+        <form id="thingForm" class=" pure-form pure-form-stacked">
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="name">Enter a Thing to add or delete here</label>
+                <input id="thingname" required class="pure-u-23-24" type="text">
+                <label for="name">Enter here if you want to change a thing</label>
+                <input id="thingchange" required class="pure-u-23-24" type="text">
+            </div>
+            <div id="theDude">
+                <button id="add-thing" type="submit" class=" pure-button added">Add thing</button>
+                <button id="change-thing" type="submit" class=" pure-button changed">Change thing</button>
+                <button id="delete-thing" type="submit" class=" pure-button deleted">Delete thing</button>
+            </div>
+        </form>
+    </section>
+    <!--End thing section-->
+</div>
+{{ partial "footer.html" . }}

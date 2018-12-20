@@ -1,0 +1,40 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+    {{ .Content }}
+    <h4 id="toc">Table of Contents</h4>
+    <nav class="toc">
+        <ul>
+            {{ range .Site.Data.sites }}
+            <li>{{ .website | markdownify }}</li>
+            {{ end }}
+        </ul>
+    </nav>
+    <div>
+        <h1 class="header">The Websites</h1>
+        <div class="card-container">
+            {{ range .Site.Data.sites }}
+            <div class="presentation-card">
+                <h3>{{ .field | markdownify }}</h3>
+                <img src = "/img/{{ .img  | markdownify }}" alt = {{ .alt }} />
+                <p>{{ .quote | markdownify }}</p>
+                <p>{{ .website | markdownify }}</p>
+                <p>{{ .service | markdownify }}</p>
+                <!--
+                          <h4 class="book-name" id="{{ .title | urlize | lower }}">{{ .title | markdownify }}</h4>
+                    
+                          <p>{{ .entry | markdownify }}</p>
+                          {{ if .credits }}<p><small><em>{{ .credits | markdownify }}</em></small></p>{{ end }}
+                          {{ if .comment }}<p>{{ .comment | markdownify }}</p>{{ end }}
+                          -->
+                <p><a href="#toc"><sup>[table of contents]</sup></a></p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}

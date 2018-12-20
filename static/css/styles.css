@@ -1,0 +1,66 @@
+.its33 {
+  position: relative;
+}
+
+.its33 img {
+  width: 30%;
+  float: left;
+  border-right: 1em #fff solid;
+  border-bottom: 1em #fff solid;
+}
+
+.alert {
+  text-align: center;
+  padding:10px;
+  margin-bottom: 10px;
+  background-color: #79c879;
+  color: #fff;
+  display:none;
+}
+
+.ani-alert {
+  text-align: center;
+  padding:10px;
+  margin-bottom: 10px;
+  color: #fff;
+  display:none;
+}
+
+.thing-alert {
+  text-align: center;
+  padding:10px;
+  margin-bottom: 10px;
+  color: #fff;
+  display:none;
+}
+
+.added {
+    background-color: #79c879;
+}
+
+.changed{
+  background-color: yellow;
+}
+
+.deleted {
+  background-color: red;
+} 
+
+
+.presentation-card {
+
+  width: 200px;
+  border-top: 3px solid lightgray;
+  border-right: 6px solid darkgray;
+  border-bottom: 6px solid darkgray;
+  border-left: 3px solid lightgray;
+  margin: 10px;
+  float: left;
+  padding: 10px;
+  min-height: 510px;
+}
+
+.presentation-card img {
+  border: 1px black solid;
+  width: 200px;
+}

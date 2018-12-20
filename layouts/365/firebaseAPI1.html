@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+
+                {{ $firebaseURL := "https://thisjsondatabase.firebaseio.com/users.json" }}
+                {{ $firebaseJSON := getJSON $firebaseURL }}
+                <h1>Pulling my firebase JSON</h1>
+                <ul>
+                    {{ range $firebaseJSON }}
+                    <li>
+                        <h3>{{ .name }} </h3>
+                        <p>... works at {{ .company }} </p>
+                    </li>
+                    {{ end }}
+                </ul>
+<hr />
+                
+
+</div>
+{{ partial "footer.html" . }}
