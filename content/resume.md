@@ -1,7 +1,7 @@
 ---
 title: "Web Developer"
 date: 2018-11-16
-description: "with an eye for design and love of data"
+description: "with an eye for design and love of data, oh yeah oh yeah"
 ---
 **Pia Smith ( [pia@piasmith.com](/contact/) )** looking for frontend development job where / with 
 
