@@ -2,7 +2,6 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Pia Smith Web Portfolio"
 author = "Pia Smith"
-theme = "blackburn"
 
 
 [indexes]
