@@ -2,10 +2,9 @@
 {{ partial "header.html" . }}
 
 <div class="header">
-   <!-- {{ partial "prev_next_post.html" . }} -->
-  <h1>{{ .Title }}</h1>
+    {{ partial "prev_next_post.html" . }}
   <h2>{{ .Description }}</h2>
-
+  <h1>{{ .Title }}</h1>
 </div>
 <div class="content">
 <!-- adding a date that I dont want right now {{ partial "post_meta.html" . }}
