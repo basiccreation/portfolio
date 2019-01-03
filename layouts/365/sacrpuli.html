@@ -8,11 +8,6 @@
     <div class="reponsive-viewport">
 
 
-
-        <h2>SCPL logo</h2>
-        <p>my account button
-        search field</p>
-        
 <div class="w3-bar w3-red">
   <a href="#" class="w3-bar-item w3-button">Home</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
@@ -27,73 +22,25 @@
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
 
-<!--
+<div class="w3-container">
+  <p>In the example, the navigation bar is replaced with a button (☰) in the top right corner when shown on tablets and mobile devices. When the button is clicked, the links in the bar will vertically stack.</p>
+  <p>Resize the screen to see the effect.</p>
+</div>
 
-        <navigation class="w3-bar w3-light-grey">
-            <a href="#" class="w3-bar-item w3-button">Home</a>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">Download/Stream</button>
-                <div class="w3-dropdown-content w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                </div>
-            </div>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">Books & More</button>
-                <div class="w3-dropdown-content w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                </div>
-            </div>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">Research</button>
-                <div class="w3-dropdown-content w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                </div>
-            </div>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">Local Information</button>
-                <div class="w3-dropdown-content w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                </div>
-            </div>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">Kids</button>
-                <div class="w3-dropdown-content w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                </div>
-            </div>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">Teens</button>
-                <div class="w3-dropdown-content w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                </div>
-            </div>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button">Services</button>
-                <div class="w3-dropdown-content w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                </div>
-            </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 
-            <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" placeholder="Search..">
-            <button class="w3-bar-item w3-button w3-green w3-mobile">Go</button>
-        </navigation>
+
 
 -->
-
         Locations sidebar navigation
         Locations & Hours
         Bookmobile
@@ -110,7 +57,7 @@
         Tuesday, January 1 (12:00 AM - 11:59 PM)
         Location: Systemwide
         All branches are closed. Happy New Year to all!
-        Ribbon Arts Guild @Scotts Valley
+        <!--Ribbon Arts Guild @Scotts Valley
         Wednesday, January 2 (10:00 AM - 1:00 PM)
         Location: Scotts Valley
         Join Roxanne Langan for ribbon work and hand sewing from 10:00am-1:00pn on the first and third Wednesdays of each month at the Scotts Valley Library. This program is sponsored by the Scotts Valley Friends of the Library. For more information, phone the library at 427-7712
@@ -179,6 +126,7 @@
         Phone⁄Email
         Text 831.264.0647
         Locations
+    -->
     </div><!-- end reponsive-viewport -->
 </div>
 {{ partial "footer.html" . }}
