@@ -1,0 +1,53 @@
+.reponsive-viewport {
+  border: 12px solid lightgray;
+  padding: 20px; 
+  width: 320px;
+  height: 500px;
+  resize: both;
+  overflow: auto;
+}
+
+.reponsive-viewport h2 {
+    font-size: 12px;
+}
+
+.reponsive-viewport[min-width~="1px"] {
+
+  h2 {
+
+    font-size: 18px;
+            color: pink;
+  }
+
+  p {
+                color: pink;
+
+  }
+
+}
+
+.reponsive-viewport[min-width~="400px"] h2 {
+    font-size: 18px;
+            color: red;
+
+}
+
+.reponsive-viewport[min-width~="500px"] h2 {
+    padding: 55px;
+    text-align: center;
+    font-size: 24px;
+            color: blue;
+
+}
+
+.reponsive-viewport[min-width~="600px"] h2 {
+    font-size: 34px;
+            color: green;
+
+}
+
+.reponsive-viewport[min-width~="1px"] h2 {
+    font-size: 18px;
+            color: pink;
+
+}
