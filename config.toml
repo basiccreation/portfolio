@@ -16,8 +16,17 @@ author = "Pia Smith"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
 
-  custom_css = ["css/styles.css"]
-  custom_js = ["js/main.js", "https://www.gstatic.com/firebasejs/5.6.0/firebase.js"]
+  custom_css = [  "css/styles.css",
+                  "css/library.css",
+                  "css/w3.css"
+                ]
+
+  custom_js = [ "js/main.js",
+                "js/ResizeSensor.js",
+                "js/ElementQueries.js",
+                "js/library.js", 
+                "https://www.gstatic.com/firebasejs/5.6.0/firebase.js"
+              ]
   
 [menu]
   # Shown in the side menu.
