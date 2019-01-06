@@ -5,128 +5,361 @@
     <h2>{{ .Description }}</h2>
 </div>
 <div class="content">
+    <p></p>
     <div class="reponsive-viewport">
+        <div class="max-nav w3-bar w3-orange">
+            <a href="#" class="w3-bar-item w3-button">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Download/Stream</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button w3-hide-small">Books & More</button>
+                <div class="w3-dropdown-content w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">SCPL Catalog</a>
+                    <a href="#" class="w3-bar-item w3-button">Online Catalog Help</a>
+                    <a href="#" class="w3-bar-item w3-button">Other Libraries' Catalogs</a>
+                </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Research</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Local Information</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Kids</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Teens</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button w3-hide-small">Services</button>
+                <div class="w3-dropdown-content w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">Library Accounts</a>
+                    <a href="#" class="w3-bar-item w3-button">Meeting Facilities</a>
+                    <a href="#" class="w3-bar-item w3-button">Internet Access/Word Processing</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
+        </div>
+        <!--max nav-->
+        <div id="search" class="w3-row">
+            <div class="w3-col l11 m11 s10 w3-bar-item w3-right">
+                <input type="text" class="w3-input" placeholder="Search..">
+            </div>
+            <div class="w3-col l1 m1 s2 w3-bar-item w3-button w3-green w3-left">
+                <a class = "w3-center" href="#" class="">Go</a>
+            </div>
+        </div> <!-- end search -->
+        <!-- begin min nav -->
+        <div id="demo" class="min-nav w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-dropdown-hover">
+            <button onclick="myOtherFunction('downloads-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Download/Stream</button>
+            <button onclick="myOtherFunction('books-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Books and More</button>
+            <div id="books-nav" class="w3-container w3-hide">
+                <a href="#" class="w3-bar-item w3-button">SCPL Catalog</a>
+                <a href="#" class="w3-bar-item w3-button">Online Catalog Help</a>
+                <a href="#" class="w3-bar-item w3-button">Other Libraries' Catalogs</a>
+            </div>
+            <button onclick="myOtherFunction('research-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Research</button>
+            <button onclick="myOtherFunction('local-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Local Information</button>
+            <button onclick="myOtherFunction('kids-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Kids</button>
+            <button onclick="myOtherFunction('teens-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Teens</button>
+            <button onclick="myOtherFunction('services-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Services</button>
+            <div id="services-nav" class="w3-container w3-hide ">
+                <a href="#" class="w3-bar-item w3-button">Library Accounts</a>
+                <a href="#" class="w3-bar-item w3-button">Meeting Facilities</a>
+                <a href="#" class="w3-bar-item w3-button">Internet Access/Word Processing</a>
+            </div>
+        </div> <!-- end min nav -->
+        <button onclick="myOtherFunction('locations')" class="w3-btn w3-block w3-blue w3-left-align">Neighborhood Libraries</button>
+        <div id="locations" class="w3-container w3-hide">
+            <button onclick="myOtherFunction('sub-lib')" class="w3-btn w3-block w3-light-gray w3-left-align">Your local library's page...</button>
+            <div id="sub-lib" class="w3-container w3-hide">
+                <a href="#" class="w3-bar-item w3-button">Aptos</a><br>
+                <a href="#" class="w3-bar-item w3-button">Boulder Creek</a><br>
+                <a href="#" class="w3-bar-item w3-button">Branciforte</a><br>
+                <a href="#" class="w3-bar-item w3-button">Downtown</a><br>
+                <a href="#" class="w3-bar-item w3-button">Felton</a><br>
+                <a href="#" class="w3-bar-item w3-button">Garfield Park</a><br>
+                <a href="#" class="w3-bar-item w3-button">La Selva Beach</a><br>
+                <a href="#" class="w3-bar-item w3-button">Live Oak</a><br>
+                <a href="#" class="w3-bar-item w3-button">Scotts Valley</a><br>
+            </div> <!-- end sub-lib-->
+            <button onclick="myOtherFunction('loc-hour')" class="w3-btn w3-block w3-light-gray w3-left-align">Locations & Hours</button>
+            <div id="loc-hour" class="w3-container w3-hide">
+                <h2> Branch Directory</h2>
+                <h3><a class="" href="#">Aptos</a></h3>
+                <p>
+                    7695 Soquel Drive<br>
+                    Aptos, CA 95003-3899
+                </p>
+                <p>Aptos: 831-427-7702</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <h4>Hours</h4>
+                <p>
+                    Sun: Closed
+                    Mon: 10 AM - 8 PM<br>
+                    Tue: 10 AM - 8 PM<br>
+                    Wed: 10 AM - 8 PM<br>
+                    Thu: 10 AM - 8 PM<br>
+                    Fri: 10 AM - 5 PM<br>
+                    Sat: 10 AM - 5 PM<br>
+                </p>
+                <hr>
+                <h3><a class="" href="">Boulder Creek</a></h3>
+                <p>13390 West Park Avenue<br>
+                    Boulder Creek, CA 95006-9301</p>
+                <p>Boulder Creek: 831-427-7703</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <h4>Hours</h4>
+                <p>Sun: Closed<br>
+                    Mon: Closed<br>
+                    Tue: 10 AM - 6 PM<br>
+                    Wed: 10 AM - 6 PM<br>
+                    Thu: 10 AM - 6 PM<br>
+                    Fri: 10 AM - 5 PM<br>
+                    Sat: 10 AM - 5 PM<br>
+                </p>
+                <hr>
+                <h3><a class="" href="">Branciforte</a></h3>
+                <p>230 Gault Street<br>
+                    Santa Cruz, CA 95062-2599</p>
+                <p>Branciforte: 831-427-7704</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <h4>Hours</h4>
+                <p>Sun: Closed<br>
+                    Mon: Closed<br>
+                    Tue: 10 AM - 6 PM<br>
+                    Wed: 10 AM - 6 PM<br>
+                    Thu: 10 AM - 6 PM<br>
+                    Fri: 11 AM - 5 PM<br>
+                    Sat: 11 AM - 5 PM<br>
+                </p>
+                <hr>
+                <h3><a class="" href="">Capitola</a></h3>
+                <p>The Capitola Branch Library was closed on May 1, 2018 for construction. For more information about the closure, please see the Capitola Branch FAQ Sheet. Updates regarding the construction in Capitola can be found here.</p>
+                <hr>
+                <h3><a class="" href="">Downtown</a></h3>
+                <p>
+                    224 Church Street<br>
+                    Santa Cruz, CA 95060-3873</p>
+                <p>Downtown: 831-427-7707</p>
+                <p>Genealogical Collection: 831-427-7707ext. 5794</p>
+                <p>Library Account Questions: 831-427-7707</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <p>Young People's Room: 831-427-7707ext. 5720</p>
+                <h4>Hours</h4>
+                <p>Sun: 1 PM - 5 PM<br>
+                    Mon: 10 AM - 8 PM<br>
+                    Tue: 10 AM - 8 PM<br>
+                    Wed: 10 AM - 8 PM<br>
+                    Thu: 10 AM - 8 PM<br>
+                    Fri: 10 AM - 5 PM<br>
+                    Sat: 10 AM - 5 PM<br>
+                </p>
+                <hr>
+                <h3><a class="" href="">Felton</a></h3>
+                <p>6299 Gushee<br>
+                    Felton, CA 95018-9140</p>
+                <p>Felton: 831-427-7708</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <h4>Hours</h4>
+                <p>Sun: 12 PM - 5 PM<br>
+                    Mon: Closed<br>
+                    Tue: 11 AM - 6 PM<br>
+                    Wed: 11 AM - 6 PM<br>
+                    Thu: 11 AM - 6 PM<br>
+                    Fri: 12 PM - 5 PM<br>
+                    Sat: 12 PM - 5 PM<br>
+                </p>
+                <hr>
+                <h3><a class="" href="">Garfield Park</a></h3>
+                <p>705 Woodrow Avenue<br>
+                    Santa Cruz, CA 95060-5950\</p>
+                <p>Garfield Park: 831-427-7709</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <h4>Hours</h4>
+                <p>Sun: Closed<br>
+                    Mon: 10 AM - 5 PM<br>
+                    Tue: 11 AM - 6 PM<br>
+                    Wed: 11 AM - 6 PM<br>
+                    Thu: 11 AM - 6 PM<br>
+                    Fri: 1 PM - 5 PM<br>
+                    Sat: 10 AM - 2 PM<br>
+                </p>
+                <hr>
+                <h3><a class="" href="">La Selva Beach</a></h3>
+                <p>316 Estrella Avenue<br>
+                    La Selva Beach, CA 95076-1724</p>
+                <p>La Selva Beach: 831-427-7710</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <h4>Hours</h4>
+                <p>Sun: Closed<br>
+                    Mon: Closed<br>
+                    Tue: 10 AM - 7 PM<br>
+                    Wed: 10 AM - 7 PM<br>
+                    Thu: 10 AM - 6 PM<br>
+                    Fri: 12 PM - 5 PM<br>
+                    Sat: 12 PM - 5 PM<br>
+                </p>
+                <hr>
+                <h3><a class="" href="">Live Oak</a></h3>
+                <p>2380 Portola Drive<br>
+                    Santa Cruz, CA 95062-4203</p>
+                <p>Live Oak: 831-427-7711</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <h4>Hours</h4>
+                <p>Sun: 1 PM - 5 PM<br>
+                    Mon: 10 AM - 7 PM<br>
+                    Tue: 10 AM - 7 PM<br>
+                    Wed: 10 AM - 7 PM<br>
+                    Thu: 10 AM - 7 PM<br>
+                    Fri: 10 AM - 5 PM<br>
+                    Sat: 10 AM - 5 PM<br>
+                </p>
+                <hr>
+                <h3><a class="" href="">Scotts Valley</a></h3>
+                <p>251 Kings Village Road<br>
+                    Scotts Valley, CA 95066</p>
+                <p>Scotts Valley: 831-427-7712</p>
+                <p>Reference Desk: 831-427-7713</p>
+                <h4>Hours</h4>
+                <p>Sun: Closed<br>
+                    Mon: 10 AM - 7 PM<br>
+                    Tue: 10 AM - 7 PM<br>
+                    Wed: 10 AM - 7 PM<br>
+                    Thu: 10 AM - 7 PM<br>
+                    Fri: 10 AM - 5 PM<br>
+                    Sat: 10 AM - 5 PM<br>
+                </p>
+                <hr>
+            </div> <!-- end hours -->
+            <a href="#"  class="w3-btn w3-block w3-light-gray w3-left-align">Bookmobile</a>
+            <a href="#" class="w3-btn w3-block w3-light-gray w3-left-align">Phone & Email Directory</a>
+            <a href="#" class="w3-btn w3-block w3-light-gray w3-left-align">Calendar of Events</a>
+        </div> <!-- end neighborhood libraries -->
+        <div class="slide-container w3-content w3-section">
+            <img src = "/img/library/girlswhocode.jpg" class = "my-slides" alt = "Girls who Code">
+            <img src  = "/img/library/healthtrust.jpg" class = "my-slides" alt = "Better Choices, Better Health">
+            <!--add more slides here -->
+        </div> <!-- end slide-container -->
+        <div class="w3-container">
+            <h3>Events Today</h3>
+            <button onclick="myOtherFunction('e1')" class="w3-btn w3-block w3-left-align cal-btn">Ribbon Arts Guild</button>
+            <div id="e1" class="w3-container w3-hide">
+                <p>10:00 AM - 1:00 PM at Scotts Valley</p>
+                <p>Join Roxanne Langan for ribbon work and hand sewing from 10:00AM-1:00 PM on the first and third Wed: nesdays of each month at the Scotts Valley Library. This program is sponsored by the Scotts Valley Friends of the Library. For more information, phone the library at 427-7712</p>
+            </div>
+            <button onclick="myOtherFunction('e2')" class="w3-btn w3-block w3-left-align cal-btn">One-on-One Tech Tutoring</button>
+            <div id="e2" class="w3-container w3-hide">
+                <p> 2:00 PM - 1:00 PM ] at Aptos</p>
+                <p>Trying to play with technology and getting frustrated? A tech savvy librarian will provide instruction in the use of a wide range of technology services: How to use free downloadable content available from your library in a number of formats (eBooks, eAudiobooks, and streaming video) Introduction to SCPL databases (i.e. Consumer Reports, Community Information, etc…) Creating an email account Downloading and attaching files Word processing direction and support Drop-in weekly appointments, 20 minute slots available. To best support learning, please bring the following items: devices (i.e., laptops, tablets, and/or smartphones), necessary passwords (Google Play, App Store), and library card! First-come, First-served. FREE!
+                </p>
+            </div>
+            <button onclick="myOtherFunction('e3')" class="w3-btn w3-block w3-left-align cal-btn">Volunteer Housing Navigators</button>
+            <div id="e3" class="w3-container w3-hide">
+                <p>12:30 PM - 2:30 PM at Downtown</p>
+                <p> Room: Downtown Downstairs Meeting Room
+                </p>
+                <p>Are you currently experiencing homelessness? Work with a compassionate and effective community volunteer or "housing navigator," who can help you set goals, overcome barriers, access documents and search for opportunities, helping you to transition back into housing, health and wellness.
+                </p>
+            </div>
+            <button onclick="myOtherFunction('e4')" class="w3-btn w3-block w3-left-align cal-btn"> Genealogical Society Lecture Series
+            </button>
+            <div id="e4" class="w3-container w3-hide">
+                <p>1:00 PM - 3:00 PM at Downtown</p>
+                <p> The Genealogical Society of Santa Cruz County presents the 2019-2020 Genealogy Lecture Series. Join us the first Wed: nesday of each month to learn about a variety of resources, strategies, and tools in the field of family research. All are invited to these free events, and donations are welcome. For more information, please call the Genealogical Society of Santa Cruz County (831) 427-7707 extension 5794.
+                </p>
+            </div>
+            <button onclick="myOtherFunction('e5')" class="w3-btn w3-block w3-left-align cal-btn"> Digital Skills Workshop
+            </button>
+            <div id="e5" class="w3-container w3-hide">
+                <p>4:30 PM - 6:00 PM at Downtown</p>
+                <p> Join our FREE hands-on workshops and learn to use the Internet for research, work, social interaction and more. Each week we explore new topics, such as Browsers, Searching, Email, and Google Docs. No registration required. Just drop in!
+                </p>
+                <p>TOPIC: Intern et browsers </p>
+            </div>
+            <button onclick="myOtherFunction('e6')" class="w3-btn w3-block w3-left-align cal-btn"> Board in the Library</button>
+            <div id="e6" class="w3-container w3-hide">
+                <p>6:30 PM - 8:30 PM at Downtown</p>
+                <p> Adults need playtime too! Join this program for hours of tabletop gaming fun. Bring your favorite board game or play some of the library's many games like Settlers of Catan, Pandemic, or Ticket to Ride. No prior gaming experience is necessary.
+                </p>
+            </div>
+        </div> <!-- end library today -->
+        <button onclick="myOtherFunction('site-map')" class="w3-btn w3-block w3-blue w3-left-align">Site Map</button>
+        <div id="site-map" class="w3-container w3-hide">
+            <div class="w3-row-padding">
+                <div class="w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Search</h5>
+                    <p><a href="#" >Catalog</a></p>
+                    <p><a href="#" >Website</a></p>
+                    <p><a href="#" >Mobile App</a></p>
+                </div>
+                <div class="w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Subscribe</h5>
+                    <p><a href="#" >SCPL News</a></p>
+                    <p><a href="#" >NextReads Newsletters</a></p>
+                    <p><a href="#" >SCPL Teacher Newsletter</a></p>
+                    <p><a href="#" >RSS Feeds</a></p>
+                </div>
+                <div class=" w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Support </h5>
+                    <p><a href="#" >SCPL Friends</a></p>
+                    <p><a href="#" >Volunteer</a></p>
+                    <p><a href="#" >Donate</a></p>
+                    <p><a href="#" >Library Value Calculator</a></p>
+                </div>
+                <div class=" w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Contact </h5>
+                    <p><a href="#" >Email Us</a></p>
+                    <p><a href="#" >Phone⁄Email</a></p>
+                    <p><a href="#" >Text 831.264.0647</a></p>
+                    <p><a href="#" >Locations</a></p>
+                </div>
+                <div class=" w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">About</h5>
+                    <p><a href="#" >About Us</a></p>
+                    <p><a href="#" >What's New?</a></p>
+                    <p><a href="#" >SCPL News - Read</a></p>
+                    <p><a href="#" >Library Employment</a></p>
+                </div>
+                <div class=" w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Governance</h5>
+                    <p><a href="#" >Library Boards</a></p>
+                    <p><a href="#" >Governance & Funding</a></p>
+                    <p><a href="#" >Planning Documents</a></p>
+                    <p><a href="#" >Library Policies</a></p>
+                </div>
+            </div>
+            <hr>
+        </div> <!-- end site map container -->
+        <div class="w3-container">
+            <p class="address">224 Church Street<br>Santa Cruz, CA 95060-3873</p>
+        </div><!-- end bottom address -->
+        <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
 
+        function myOtherFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
 
-<div class="w3-bar w3-red">
-  <a href="#" class="w3-bar-item w3-button">Home</a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-</div>
+        var myIndex = 0;
+        carousel();
 
-<div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
-</div>
-
-<div class="w3-container">
-  <p>In the example, the navigation bar is replaced with a button (☰) in the top right corner when shown on tablets and mobile devices. When the button is clicked, the links in the bar will vertically stack.</p>
-  <p>Resize the screen to see the effect.</p>
-</div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("demo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
-
-
--->
-        Locations sidebar navigation
-        Locations & Hours
-        Bookmobile
-        Phone & Email Directory
-        Calendar of Events
-        Focus
-        Read!
-        Fly by night
-        Twelve-year-old Mosca Mye lives in a land superficially similar to, but also fantastically divergent from, ... [Continue]
-        main area
-        Upcoming Events @ the Library
-        View all events
-        Happy New Year
-        Tuesday, January 1 (12:00 AM - 11:59 PM)
-        Location: Systemwide
-        All branches are closed. Happy New Year to all!
-        <!--Ribbon Arts Guild @Scotts Valley
-        Wednesday, January 2 (10:00 AM - 1:00 PM)
-        Location: Scotts Valley
-        Join Roxanne Langan for ribbon work and hand sewing from 10:00am-1:00pn on the first and third Wednesdays of each month at the Scotts Valley Library. This program is sponsored by the Scotts Valley Friends of the Library. For more information, phone the library at 427-7712
-        One-on-One Tech Tutoring @ Aptos
-        Wednesday, January 2 (12:00 PM - 1:00 PM)
-        Location: Aptos
-        Trying to play with technology and getting frustrated? A tech savvy librarian will provide instruction in the use of a wide range of technology services: How to use free downloadable content available from your library in a number of formats (eBooks, eAudiobooks, and streaming video) Introduction to SCPL databases (i.e. Consumer Reports, Community Information, etc…) Creating an email account Downloading and attaching files Word processing direction and support Drop-in weekly appointments, 20 minute slots available. To best support learning, please bring the following items: devices (i.e., laptops, tablets, and/or smartphones), necessary passwords (Google Play, App Store), and library card! First-come, First-served. FREE!
-        Volunteer Housing Navigators @ Downtown
-        Wednesday, January 2 (12:30 PM - 2:30 PM)
-        Location: Downtown
-        Room: Downtown Downstairs Meeting Room
-        Are you currently experiencing homelessness? Work with a compassionate and effective community volunteer or "housing navigator," who can help you set goals, overcome barriers, access documents and search for opportunities, helping you to transition back into housing, health and wellness.
-        Genealogical Society Lecture Series @ Downtown
-        Wednesday, January 2 (1:00 PM - 3:00 PM)
-        Location: Downtown
-        The Genealogical Society of Santa Cruz County presents the 2019-2020 Genealogy Lecture Series. Join us the first Wednesday of each month to learn about a variety of resources, strategies, and tools in the field of family research. All are invited to these free events, and donations are welcome. For more information, please call the Genealogical Society of Santa Cruz County (831) 427-7707 extension 5794.
-        Digital Skills Workshop @ Downtown
-        Wednesday, January 2 (4:30 PM - 6:00 PM)
-        Location: Downtown
-        Join our FREE hands-on workshops and learn to use the Internet for research, work, social interaction and more. Each week we explore new topics, such as Browsers, Searching, Email, and Google Docs. No registration required. Just drop in!
-        TOPIC: Internet browsers
-        Board in the Library
-        Wednesday, January 2 (6:30 PM - 8:30 PM)
-        Location: Scotts Valley
-        Adults need playtime too! Join this program for hours of tabletop gaming fun. Bring your favorite board game or play some of the library's many games like Settlers of Catan, Pandemic, or Ticket to Ride. No prior gaming experience is necessary.
-        Working Together @ Downtown
-        Thursday, January 3 (10:00 AM - 11:30 AM)
-        Location: Downtown
-        Room: Downtown Downstairs Meeting Room
-        Information navigation and social support open to all. Work individually with an infomration advocate on any infomration need: (housing search, application, resume?). Make a phone call or get help with free scanning, printing or email. Apply for a lifeline phone or get connected to a local program or service. You decide, we assist.
-        Capitola Book Discussion Group @ Aptos
-        Thursday, January 3 (10:00 AM - 11:00 AM)
-        Location: Aptos
-        The Capitola Book Discussion Group meets every 1st Wednesday of the month at 10:00am. We will be meeting at Aptos Library due to Capitola closure. All adults are welcome. For more information, call (831) 427-7702.
-        This month we will be reading, A Natural History of the Senses written by Diane Ackerman.
-        Death Café @ Downtown
-        Thursday, January 3 (10:30 AM - 12:00 PM)
-        Location: Downtown
-        Room: Downtown Upstairs Meeting Room
-        Come gather to eat cake, drink tea and discuss death. A Death Café is a group directed discussion of death with no agenda, objectives or themes. It is not a grief support group or counseling session, just some folks getting together to eat cake and talk about death. Program provided by Hospice of Santa Cruz County. For more information contact Vanessa at Hospice of Santa Cruz County 831-430-3047 or visit: deathcafe.com/
-        buttom menu
-        #Search
-        Catalog
-        Website
-        Mobile App
-        #Subscribe
-        SCPL News - Sign Up / Read
-        NextReads Newsletters
-        SCPL Teacher Newsletter
-        RSS Feeds
-        #Support
-        SCPL Friends
-        Volunteer
-        Donate
-        Library Value Calculator
-        #About SCPL
-        About Us
-        What's New?
-        Library Boards
-        Governance & Funding
-        Planning Documents
-        Library Policies
-        Library Employment
-        #Contact
-        Email Us
-        Phone⁄Email
-        Text 831.264.0647
-        Locations
-    -->
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("my-slides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 8000);
+        }
+        </script>
     </div><!-- end reponsive-viewport -->
-</div>
+</div> <!-- end content -->
 {{ partial "footer.html" . }}
