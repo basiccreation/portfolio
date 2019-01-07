@@ -5,6 +5,8 @@
     <h2>{{ .Description }}</h2>
 </div>
 <div class="content">
+
+    
     {{ range where .Site.Data.states "name" "==" "California" }}
     <h1 class= "customheaderblue">The State of {{ .name}}</h1>
     <p>{{ .desc}}</p>
@@ -14,6 +16,7 @@
     <h3 class= "customheaderred"> The capital in {{.name}} is {{.capital}} and the state abbreviation is {{ .abbr}}.</h3>
     <img class="special-img-class" src={{.src}} />
     <hr />
+
     <h2>{{ .name}} Images</h2>
     {{ $array := .imgs }}
     {{ range $array }}
@@ -23,4 +26,7 @@
         {{ end }}
         {{end}}
     </div>
+
+
+
     {{ partial "footer.html" . }}

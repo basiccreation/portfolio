@@ -1,0 +1,52 @@
+<style>
+.buttons a {
+  font-size: 16px;
+}
+.buttons a:hover {
+  cursor:pointer; 
+  font-size: 16px;
+}
+</style>
+<div class="main_div">
+  <div class="buttons">
+    <a href="#" onclick="divVisibility('Div1');">Div1</a> | 
+    <a href="#" onclick="divVisibility('Div2');">Div2</a> | 
+    <a href="#" onclick="divVisibility('Div3');">Div3</a> | 
+    <a href="#" onclick="divVisibility('Div4');">Div4</a>
+  </div>
+
+  <div class="inner_div">
+    <div id="Div1">I'm Div One</div>
+    <div id="Div2" style="display: none;">I'm Div Two</div>
+    <div id="Div3" style="display: none;">I'm Div Three</div>
+    <div id="Div4" style="display: none;">I'm Div Four</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+   var divs = ["Div1", "Div2", "Div3", "Div4"];
+    var visibleDivId = null;
+    function divVisibility(divId) {
+      if(visibleDivId === divId) {
+        visibleDivId = null;
+      } else {
+        visibleDivId = divId;
+      }
+      hideNonVisibleDivs();
+    }
+
+
+
+    function hideNonVisibleDivs() {
+      var i, divId, div;
+      for(i = 0; i < divs.length; i++) {
+        divId = divs[i];
+        div = document.getElementById(divId);
+        if(visibleDivId === divId) {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+    }
+</script>

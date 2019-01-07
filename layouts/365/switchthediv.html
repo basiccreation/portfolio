@@ -1,0 +1,110 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+
+<style>
+.theipaddims {
+  position: absolute;
+
+  height: 500px;
+  width: 600px;
+  border: 3px dotted red;
+    opacity: 0.3;
+
+  z-index: -1;
+}
+
+.thelaptopdims {
+  position: absolute;
+
+  height: 600px;
+  width: 1000px;
+  border: 3px dotted blue;
+    opacity: 0.3;
+
+  z-index: -1;
+}
+
+.inner_div {
+  height: 600px;
+  width: 320px;
+  border: 3px solid green;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 10px;
+  resize: both;
+  overflow: auto;
+}
+
+.buttons a {
+  font-size: 16px;
+}
+.buttons a:hover {
+  cursor:pointer; 
+  font-size: 16px;
+}
+</style>
+<div class = "theipaddims"></div>
+<div class = "thelaptopdims"></div>
+<div class="main_div">
+  <div class="buttons">
+    <a href="#" onclick="divVisibility('Div1');">Div1</a> | 
+    <a href="#" onclick="divVisibility('Div2');">Div2</a> | 
+    <a href="#" onclick="divVisibility('Div3');">Div3</a> | 
+    <a href="#" onclick="divVisibility('Div4');">Div4</a>
+  </div>
+
+  <div class="inner_div">
+    <div id="Div1">
+      {{ partial "library/div1.html" . }}
+    </div>
+    <div id="Div2" style="display: none;">
+      {{ partial "library/div2.html" . }}
+    </div>
+    <div id="Div3" style="display: none;">
+     {{ partial "library/div3.html" . }}
+    </div>
+    <div id="Div4" style="display: none;">
+      {{ partial "library/div4.html" . }}
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+   var divs = ["Div1", "Div2", "Div3", "Div4"];
+    var visibleDivId = null;
+    function divVisibility(divId) {
+      if(visibleDivId === divId) {
+        visibleDivId = null;
+      } else {
+        visibleDivId = divId;
+      }
+      hideNonVisibleDivs();
+    }
+
+
+
+    function hideNonVisibleDivs() {
+      var i, divId, div;
+      for(i = 0; i < divs.length; i++) {
+        divId = divs[i];
+        div = document.getElementById(divId);
+        if(visibleDivId === divId) {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+    }
+</script>
+
+    </div>
+
+
+
+    {{ partial "footer.html" . }}
