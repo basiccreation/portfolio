@@ -1,0 +1,112 @@
+{{ partial "header.html" . }}
+<div class="header">
+    {{ partial "prev_next_post.html" . }}
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
+</div>
+<div class="content">
+<div>
+
+
+</div>
+
+
+
+    <div class="reponsive-viewport">
+        <div class="max-nav w3-bar w3-orange">
+            <a href="#" class="w3-bar-item w3-button">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Download/Stream</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button w3-hide-small">Books & More</button>
+                <div class="w3-dropdown-content w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">SCPL Catalog</a>
+                    <a href="#" class="w3-bar-item w3-button">Online Catalog Help</a>
+                    <a href="#" class="w3-bar-item w3-button">Other Libraries' Catalogs</a>
+                </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Research</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Local Information</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Kids</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Teens</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button w3-hide-small">Services</button>
+                <div class="w3-dropdown-content w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">Library Accounts</a>
+                    <a href="#" class="w3-bar-item w3-button">Meeting Facilities</a>
+                    <a href="#" class="w3-bar-item w3-button">Internet Access/Word Processing</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
+        </div>
+        <!--max nav-->
+        <div id="search" class="w3-row">
+            <div class="w3-col l11 m11 s10 w3-bar-item w3-right">
+                <input type="text" class="w3-input" placeholder="Search..">
+            </div>
+            <div class="w3-col l1 m1 s2 w3-bar-item w3-button w3-green w3-left">
+                <a class = "w3-center" href="#" class="">Go</a>
+            </div>
+        </div> <!-- end search -->
+        <!-- begin min nav -->
+        <div id="demo" class="min-nav w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-dropdown-hover">
+            <button onclick="myOtherFunction('downloads-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Download/Stream</button>
+            <button onclick="myOtherFunction('books-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Books and More</button>
+            <div id="books-nav" class="w3-container w3-hide">
+                <a href="#" class="w3-bar-item w3-button">SCPL Catalog</a>
+                <a href="#" class="w3-bar-item w3-button">Online Catalog Help</a>
+                <a href="#" class="w3-bar-item w3-button">Other Libraries' Catalogs</a>
+            </div>
+            <button onclick="myOtherFunction('research-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Research</button>
+            <button onclick="myOtherFunction('local-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Local Information</button>
+            <button onclick="myOtherFunction('kids-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Kids</button>
+            <button onclick="myOtherFunction('teens-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Teens</button>
+            <button onclick="myOtherFunction('services-nav')" class="w3-btn w3-block w3-light-gray w3-left-align">Services</button>
+            <div id="services-nav" class="w3-container w3-hide ">
+                <a href="#" class="w3-bar-item w3-button">Library Accounts</a>
+                <a href="#" class="w3-bar-item w3-button">Meeting Facilities</a>
+                <a href="#" class="w3-bar-item w3-button">Internet Access/Word Processing</a>
+            </div>
+        </div> <!-- end min nav -->
+
+
+
+
+
+        
+        <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function myOtherFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("my-slides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 8000);
+        }
+        </script>
+    </div><!-- end reponsive-viewport -->
+</div> <!-- end content -->
+{{ partial "footer.html" . }}
