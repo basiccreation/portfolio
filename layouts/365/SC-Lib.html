@@ -67,12 +67,74 @@
                 <a href="#" class="w3-bar-item w3-button">Internet Access/Word Processing</a>
             </div>
         </div> <!-- end min nav -->
+<div class="inner_div">
+    <div id="Div1">
+      {{ partial "library/div1.html" . }}
+    </div>
+    <div id="Div2" style="display: none;">
+      {{ partial "library/div2.html" . }}
+    </div>
+    <div id="Div3" style="display: none;">
+     {{ partial "library/div3.html" . }}
+    </div>
+    <div id="Div4" style="display: none;">
+      {{ partial "library/div4.html" . }}
+    </div>
+  </div>
 
 
 
 
-
-        
+                <button onclick="myOtherFunction('site-map')" class="w3-btn w3-block w3-blue w3-left-align">Site Map</button>
+        <div id="site-map" class="w3-container w3-hide">
+            <div class="w3-row-padding">
+                <div class="w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Search</h5>
+                    <p><a href="#" >Catalog</a></p>
+                    <p><a href="#" >Website</a></p>
+                    <p><a href="#" >Mobile App</a></p>
+                </div>
+                <div class="w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Subscribe</h5>
+                    <p><a href="#" >SCPL News</a></p>
+                    <p><a href="#" >NextReads Newsletters</a></p>
+                    <p><a href="#" >SCPL Teacher Newsletter</a></p>
+                    <p><a href="#" >RSS Feeds</a></p>
+                </div>
+                <div class=" w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Support </h5>
+                    <p><a href="#" >SCPL Friends</a></p>
+                    <p><a href="#" >Volunteer</a></p>
+                    <p><a href="#" >Donate</a></p>
+                    <p><a href="#" >Library Value Calculator</a></p>
+                </div>
+                <div class=" w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Contact </h5>
+                    <p><a href="#" >Email Us</a></p>
+                    <p><a href="#" >Phone⁄Email</a></p>
+                    <p><a href="#" >Text 831.264.0647</a></p>
+                    <p><a href="#" >Locations</a></p>
+                </div>
+                <div class=" w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">About</h5>
+                    <p><a href="#" >About Us</a></p>
+                    <p><a href="#" >What's New?</a></p>
+                    <p><a href="#" >SCPL News - Read</a></p>
+                    <p><a href="#" >Library Employment</a></p>
+                </div>
+                <div class=" w3-col l2 m4 s12 w3-cell ">
+                    <h5 class="sitemap-head">Governance</h5>
+                    <p><a href="#" >Library Boards</a></p>
+                    <p><a href="#" >Governance & Funding</a></p>
+                    <p><a href="#" >Planning Documents</a></p>
+                    <p><a href="#" >Library Policies</a></p>
+                </div>
+            </div>
+            <hr>
+        </div> <!-- end site map container -->
+        <div class="w3-container">
+            <p class="address">224 Church Street<br>Santa Cruz, CA 95060-3873</p>
+        </div><!-- end bottom address -->
         <script>
         function myFunction() {
             var x = document.getElementById("demo");
