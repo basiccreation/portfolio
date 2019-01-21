@@ -5,13 +5,12 @@
     height: 568px;
     resize: both;
     overflow: auto;
-
+    background-color: #fff;
     box-sizing: border-box;
 
     /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 
     -ms-text-size-adjust: 100%;
-
     -webkit-text-size-adjust: 100%;
     margin: 0;
     font-family: Verdana, sans-serif;
@@ -28,6 +27,7 @@
 
 .nav-btn:hover .nav-btn-child {
     display: block;
+
 }
 
 /*parentClass:hover childclass { display: inline } etc.*/
@@ -744,9 +744,7 @@ a {
     position: relative
 }
 
-.w3-hide-small {
-    display: none !important
-}
+
 
 .w3-mobile {
     display: block;
@@ -1802,58 +1800,87 @@ a {
 .w3-border-pale-blue,
 .w3-hover-border-pale-blue:hover {
     border-color: #e7ffff !important
-}.theipaddims {
-  position: absolute;
-  border-radius: 20px;
-  padding: 10px;
-
-  height: 500px;
-  width: 600px;
-  border: 3px dotted red;
-    opacity: 0.3;
-text-align: right;
-  z-index: -1;
-}
-
-.thelaptopdims {
-  position: absolute;
-
-  height: 600px;
-  width: 1000px;
-  border: 3px dotted blue;
-    opacity: 0.3;
-text-align: right;
-  border-radius: 20px;
-  padding: 10px;
-
-  z-index: -1;
 }
 
 .theipaddims {
-  position: absolute;
-  border-radius: 20px;
-  padding: 10px;
+    position: absolute;
+    border-radius: 20px;
+    padding: 10px;
 
-  height: 500px;
-  width: 600px;
-  border: 3px dotted red;
+    height: 500px;
+    width: 600px;
+    border: 3px dotted red;
     opacity: 0.3;
-text-align: right;
-  z-index: -1;
+    text-align: right;
+    z-index: -1;
 }
 
 .thelaptopdims {
-  position: absolute;
+    position: absolute;
 
-  height: 600px;
-  width: 1000px;
-  border: 3px dotted blue;
+    height: 600px;
+    width: 1000px;
+    border: 3px dotted blue;
     opacity: 0.3;
-text-align: right;
-  border-radius: 20px;
-  padding: 10px;
+    text-align: right;
+    border-radius: 20px;
+    padding: 10px;
 
-  z-index: -1;
+    z-index: -1;
+}
+
+.theipaddims {
+    position: absolute;
+    border-radius: 20px;
+    padding: 10px;
+
+    height: 500px;
+    width: 600px;
+    border: 3px dotted red;
+    opacity: 0.3;
+    text-align: right;
+    z-index: -1;
+}
+
+.thelaptopdims {
+    position: absolute;
+
+    height: 600px;
+    width: 1000px;
+    border: 3px dotted blue;
+    opacity: 0.3;
+    text-align: right;
+    border-radius: 20px;
+    padding: 10px;
+
+    z-index: -1;
+}
+
+.research-navigation {
+    height: 75px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    font-weight: bolder;
+}
+
+
+.cyber-security-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.cyber-security-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -1907,7 +1934,9 @@ text-align: right;
         width: 99.99999%
     }
 
-
+    .w3-hide-small {
+        display: none !important
+    }
 }
 
 /*end min 1px*/
@@ -1968,8 +1997,6 @@ text-align: right;
         width: 500px
     }
 
-
-
     .w3-hide-medium {
         display: none !important
     }
@@ -1982,7 +2009,9 @@ text-align: right;
         padding-top: 50px
     }
 
-
+    .w3-hide-small {
+        display: inline !important
+    }
 
 }
 
@@ -2044,6 +2073,14 @@ text-align: right;
         width: 800px
     }
 
+    .w3-hide-small {
+        display: inline !important
+    }
+
+    .w3-hide-medium {
+        display: inline !important
+    }
+
     .w3-hide-large {
         display: none !important
     }
@@ -2052,9 +2089,7 @@ text-align: right;
         display: block !important
     }
 
-    .w3-hide-small {
-        display: block !important
-    }
+
 }
 
 /* end min-width~="993px */

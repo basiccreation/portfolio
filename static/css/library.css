@@ -5,6 +5,7 @@
   height: 568px;
   resize: both;
   overflow: auto;
+  background-color: #fff;
   box-sizing: border-box;
   /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
   -ms-text-size-adjust: 100%;
@@ -602,9 +603,6 @@ a {
 .w3-dropdown-hover.w3-mobile .w3-dropdown-content,
 .w3-dropdown-click.w3-mobile .w3-dropdown-content {
   position: relative; }
-
-.w3-hide-small {
-  display: none !important; }
 
 .w3-mobile {
   display: block;
@@ -1486,6 +1484,29 @@ a {
   padding: 10px;
   z-index: -1; }
 
+.research-navigation {
+  height: 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  font-weight: bolder; }
+
+.cyber-security-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0; }
+
+.cyber-security-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .reponsive-viewport[min-width~="1px"] .w3-col.s1 {
   width: 8.33333%; }
 
@@ -1521,6 +1542,9 @@ a {
 
 .reponsive-viewport[min-width~="1px"] .w3-col.s12 {
   width: 99.99999%; }
+
+.reponsive-viewport[min-width~="1px"] .w3-hide-small {
+  display: none !important; }
 
 /*end min 1px*/
 .reponsive-viewport[min-width~="601px"] .w3-col.m1 {
@@ -1571,6 +1595,9 @@ a {
 .reponsive-viewport[min-width~="601px"] .w3-modal {
   padding-top: 50px; }
 
+.reponsive-viewport[min-width~="601px"] .w3-hide-small {
+  display: inline !important; }
+
 /* end min-width~="601px*/
 .reponsive-viewport[min-width~="901px"] .w3-col.l1 {
   width: 8.33333%; }
@@ -1611,13 +1638,16 @@ a {
 .reponsive-viewport[min-width~="901px"] .w3-modal-content {
   width: 800px; }
 
+.reponsive-viewport[min-width~="901px"] .w3-hide-small {
+  display: inline !important; }
+
+.reponsive-viewport[min-width~="901px"] .w3-hide-medium {
+  display: inline !important; }
+
 .reponsive-viewport[min-width~="901px"] .w3-hide-large {
   display: none !important; }
 
 .reponsive-viewport[min-width~="901px"] .w3-sidebar.w3-collapse {
-  display: block !important; }
-
-.reponsive-viewport[min-width~="901px"] .w3-hide-small {
   display: block !important; }
 
 /* end min-width~="993px */
